@@ -1,0 +1,168 @@
+index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Barbería WUNDER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: black;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid gold;
+        }
+
+        header h1 {
+            color: gold;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: gold;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: #222;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: gold;
+        }
+
+        button {
+            background: gold;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: orange;
+        }
+
+        footer {
+            background: black;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>💈 Barbería WUNDER</h1>
+    <p>Estilo y precisión</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <h2>Tu mejor look empieza aquí</h2>
+</section>
+
+<section class="section" id="servicios">
+    <h2>Servicios</h2>
+
+    <div class="servicios">
+        <div class="card">
+            <h3>Corte clásico</h3>
+            <p>S/ 20</p>
+            <button onclick="reservar('Corte clásico')">Reservar</button>
+        </div>
+
+        <div class="card">
+            <h3>Fade moderno</h3>
+            <p>S/ 25</p>
+            <button onclick="reservar('Fade moderno')">Reservar</button>
+        </div>
+
+        <div class="card">
+            <h3>Barba</h3>
+            <p>S/ 15</p>
+            <button onclick="reservar('Barba')">Reservar</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 sjm - Perú</p>
+    <p>📞 916 803 059</p>
+    <button onclick="whatsapp()">Reservar por WhatsApp</button>
+</section>
+
+<footer>
+    <p>© 2026 Barbería WUNDER</p>
+</footer>
+
+<script>
+function reservar(servicio) {
+    alert("Reservaste: " + servicio);
+}
+
+function whatsapp() {
+    let numero = "51916803059";
+    let mensaje = "Hola, quiero reservar una cita";
+    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
